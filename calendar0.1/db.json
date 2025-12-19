@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "username": "ashish2008",
+        "password": "pbkdf2:sha256:1000000$buTnM769Bk1eDHcO$483978078223128e085e6a8a0b02dfcf54c0d6250781a2c925bd1b6af5eab676",
+        "is_superadmin": false,
+        "auth_type": "local"
+    },
+    {
+        "id": 2,
+        "username": "admin123",
+        "password": "pbkdf2:sha256:1000000$glyNPU8pGIkE8n8E$7d4fe437db41bb23ba4adac8feb8d95a07c1a9dbe1d8eb169ea6f26c85604d7e",
+        "is_superadmin": true,
+        "auth_type": "local"
+    },
+    {
+        "id": 3,
+        "username": "ckuthyar",
+        "password": "pbkdf2:sha256:1000000$LpG3KCpYwPEmvLWX$d9ea01625a66338a2785dc4bfb3eac426811c10fd1e7d45e8fca4ba1688f44c8",
+        "is_superadmin": false,
+        "auth_type": "local"
+    },
+    {
+        "id": 4,
+        "username": "ckuthyar",
+        "password": "pbkdf2:sha256:1000000$OU6FJNsYTnKhj8jl$6d2fedc6b340c6eef692f0bdf8007581c03d01fb95656ff9122a3d0e3a1f5055",
+        "is_superadmin": false,
+        "auth_type": "local"
+    }
+]

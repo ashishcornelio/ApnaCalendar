@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <p class="tagline">Plan Your Year Ahead</p>
+        <h1>Remember Your <span class="highlight">Dates</span> Together</h1>
+        <p class="subtext">
+            A beautiful, secure space to generate and print your personal calendars.
+            Only authorized admins control the designs.
+        </p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('register') }}" class="btn-primary">Become an Admin</a>
+            <a href="{{ url_for('login') }}" class="btn-secondary">Login</a>
+        </div>
+    </div>
+    
+    <div class="hero-features">
+        <div class="feature">
+            <h3> ❤️ memories First</h3>
+            <p>Designed specifically to organize your precious moments.</p>
+        </div>
+        <div class="feature">
+            <h3>🔒 Secure & Private</h3>
+            <p>Your data is protected. Only admins access generation tools.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

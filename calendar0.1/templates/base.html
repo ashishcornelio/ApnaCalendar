@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaCalendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">ApnaCalendar</div>
+        <div class="links">
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if current_user.is_authenticated %}
+                {% if current_user.is_superadmin %}
+                    <a href="{{ url_for('superadmin') }}">Admin Panel</a>
+                {% else %}
+                    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                {% endif %}
+                <a href="{{ url_for('logout') }}" class="btn-nav">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}" class="btn-nav">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash">{{ messages[0] }}</div>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
